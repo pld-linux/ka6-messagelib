@@ -148,6 +148,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/libmessageviewer
 %{_datadir}/messagelist
 %{_datadir}/messageviewer
+%dir %{_datadir}/org.kde.syntax-highlighting
+%dir %{_datadir}/org.kde.syntax-highlighting/syntax
 %{_datadir}/org.kde.syntax-highlighting/syntax/kmail-template.xml
 %{_datadir}/qlogging-categories6/messagelib.categories
 %{_datadir}/qlogging-categories6/messagelib.renamecategories
