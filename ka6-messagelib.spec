@@ -8,7 +8,7 @@
 Summary:	Message library
 Name:		ka6-%{kaname}
 Version:	24.08.2
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -53,6 +53,7 @@ BuildRequires:	kf6-kconfig-devel >= %{kframever}
 BuildRequires:	kf6-kconfigwidgets-devel >= %{kframever}
 BuildRequires:	kf6-kcontacts-devel >= %{kframever}
 BuildRequires:	kf6-kdbusaddons-devel >= %{kframever}
+BuildRequires:	kf6-kguiaddons-devel >= %{kframever}
 BuildRequires:	kf6-ki18n-devel >= %{kframever}
 BuildRequires:	kf6-kiconthemes-devel >= %{kframever}
 BuildRequires:	kf6-kio-devel >= %{kframever}
@@ -72,8 +73,8 @@ BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-ExcludeArch:	x32
 Obsoletes:	ka5-%{kaname} < %{version}
+ExcludeArch:	x32 i686
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
