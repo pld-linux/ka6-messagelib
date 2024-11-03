@@ -8,7 +8,7 @@
 Summary:	Message library
 Name:		ka6-%{kaname}
 Version:	24.08.2
-Release:	2
+Release:	3
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -140,7 +140,10 @@ rm -rf $RPM_BUILD_ROOT
 %ghost %{_libdir}/libKPim6TemplateParser.so.6
 %attr(755,root,root) %{_libdir}/libKPim6WebEngineViewer.so.*.*
 %ghost %{_libdir}/libKPim6WebEngineViewer.so.6
+%dir %{_libdir}/qt6/plugins/pim6/messageviewer/headerstyle
 %attr(755,root,root) %{_libdir}/qt6/plugins/pim6/messageviewer/headerstyle/messageviewer_defaultgrantleeheaderstyleplugin.so
+%dir %{_libdir}/qt6/plugins/pim6/messageviewer/kf6
+%dir %{_libdir}/qt6/plugins/pim6/messageviewer/kf6/ktexttemplate
 %attr(755,root,root) %{_libdir}/qt6/plugins/pim6/messageviewer/kf6/ktexttemplate/messageviewer_ktexttemplate_extension.so
 %{_datadir}/config.kcfg/customtemplates_kfg.kcfg
 %{_datadir}/config.kcfg/templatesconfiguration_kfg.kcfg
