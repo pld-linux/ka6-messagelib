@@ -28,7 +28,6 @@ BuildRequires:	Qt6WebEngine-devel >= 5.11.1
 BuildRequires:	Qt6Widgets-devel
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-devel
-BuildRequires:	gpgme-qt6-devel >= 1.8.0
 BuildRequires:	grantlee-qt6-devel >= 5.1
 BuildRequires:	ka6-akonadi-contacts-devel >= %{kdeappsver}
 BuildRequires:	ka6-akonadi-devel >= %{kdeappsver}
@@ -68,6 +67,7 @@ BuildRequires:	kf6-sonnet-devel >= %{kframever}
 BuildRequires:	kf6-syntax-highlighting-devel >= %{kframever}
 BuildRequires:	ninja
 BuildRequires:	qca-qt6-devel
+BuildRequires:	qgpgme-qt6-devel >= 1.8.0
 BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
