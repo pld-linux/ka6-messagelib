@@ -8,7 +8,7 @@
 Summary:	Message library
 Name:		ka6-%{kaname}
 Version:	25.04.3
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -35,6 +35,7 @@ BuildRequires:	ka6-akonadi-mime-devel >= %{kdeappsver}
 BuildRequires:	ka6-akonadi-search-devel >= %{kdeappsver}
 BuildRequires:	ka6-grantleetheme-devel >= %{kdeappsver}
 BuildRequires:	ka6-kidentitymanagement-devel >= %{kdeappsver}
+BuildRequires:	ka6-kimap-devel >= %{kdeappsver}
 BuildRequires:	ka6-kldap-devel >= %{kdeappsver}
 BuildRequires:	ka6-kmailtransport-devel >= %{kdeappsver}
 BuildRequires:	ka6-kmbox-devel >= %{kdeappsver}
@@ -58,6 +59,8 @@ BuildRequires:	kf6-kiconthemes-devel >= %{kframever}
 BuildRequires:	kf6-kio-devel >= %{kframever}
 BuildRequires:	kf6-kitemviews-devel >= %{kframever}
 BuildRequires:	kf6-kjobwidgets-devel >= %{kframever}
+BuildRequires:	kf6-knewstuff-devel >= %{kframever}
+BuildRequires:	kf6-knotifications-devel >= %{kframever}
 BuildRequires:	kf6-kservice-devel >= %{kframever}
 BuildRequires:	kf6-ktextwidgets-devel >= %{kframever}
 BuildRequires:	kf6-kwidgetsaddons-devel >= %{kframever}
