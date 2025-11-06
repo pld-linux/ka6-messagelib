@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		messagelib
 Summary:	Message library
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	f0655db8539e06bc5370b810207ce09d
+# Source0-md5:	2d144c02e2f6b0a78a464b30d2ce401d
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -130,25 +130,25 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKPim6MessageComposer.so.*.*
+%{_libdir}/libKPim6MessageComposer.so.*.*
 %ghost %{_libdir}/libKPim6MessageComposer.so.6
-%attr(755,root,root) %{_libdir}/libKPim6MessageCore.so.*.*
+%{_libdir}/libKPim6MessageCore.so.*.*
 %ghost %{_libdir}/libKPim6MessageCore.so.6
-%attr(755,root,root) %{_libdir}/libKPim6MessageList.so.*.*
+%{_libdir}/libKPim6MessageList.so.*.*
 %ghost %{_libdir}/libKPim6MessageList.so.6
-%attr(755,root,root) %{_libdir}/libKPim6MessageViewer.so.*.*
+%{_libdir}/libKPim6MessageViewer.so.*.*
 %ghost %{_libdir}/libKPim6MessageViewer.so.6
-%attr(755,root,root) %{_libdir}/libKPim6MimeTreeParser.so.*.*
+%{_libdir}/libKPim6MimeTreeParser.so.*.*
 %ghost %{_libdir}/libKPim6MimeTreeParser.so.6
-%attr(755,root,root) %{_libdir}/libKPim6TemplateParser.so.*.*
+%{_libdir}/libKPim6TemplateParser.so.*.*
 %ghost %{_libdir}/libKPim6TemplateParser.so.6
-%attr(755,root,root) %{_libdir}/libKPim6WebEngineViewer.so.*.*
+%{_libdir}/libKPim6WebEngineViewer.so.*.*
 %ghost %{_libdir}/libKPim6WebEngineViewer.so.6
 %dir %{_libdir}/qt6/plugins/pim6/messageviewer/headerstyle
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/messageviewer/headerstyle/messageviewer_defaultgrantleeheaderstyleplugin.so
+%{_libdir}/qt6/plugins/pim6/messageviewer/headerstyle/messageviewer_defaultgrantleeheaderstyleplugin.so
 %dir %{_libdir}/qt6/plugins/pim6/messageviewer/kf6
 %dir %{_libdir}/qt6/plugins/pim6/messageviewer/kf6/ktexttemplate
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/messageviewer/kf6/ktexttemplate/messageviewer_ktexttemplate_extension.so
+%{_libdir}/qt6/plugins/pim6/messageviewer/kf6/ktexttemplate/messageviewer_ktexttemplate_extension.so
 %{_datadir}/config.kcfg/customtemplates_kfg.kcfg
 %{_datadir}/config.kcfg/templatesconfiguration_kfg.kcfg
 %{_datadir}/knotifications6/messageviewer.notifyrc
