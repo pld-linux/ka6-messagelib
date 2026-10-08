@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.08.1
+%define		kdeappsver	26.08.2
 %define		kframever	6.29.0
 %define		qtver		5.15.2
 %define		kaname		messagelib
 Summary:	Message library
 Name:		ka6-%{kaname}
-Version:	26.08.1
+Version:	26.08.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	d8af8be29b0174c281bebacb3f79b19a
+# Source0-md5:	727056b684732bc2dd6aa3f8f12f5588
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -76,6 +76,7 @@ BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+Requires:	%{name}-data = %{version}-%{release}
 %requires_eq_to Qt6Core Qt6Core-devel
 Obsoletes:	ka5-%{kaname} < %{version}
 ExcludeArch:	x32 i686
@@ -86,6 +87,18 @@ Library which provides support for mail apps.
 
 %description -l pl.UTF-8
 Biblioteka, która wspiera aplikacje pocztowe.
+
+%package data
+Summary:	Data files for %{kaname}
+Summary(pl.UTF-8):	Dane dla %{kaname}
+Group:		X11/Libraries
+BuildArch:	noarch
+
+%description data
+Data files for %{kaname}.
+
+%description data -l pl.UTF-8
+Dane dla %{kaname}.
 
 %package devel
 Summary:	Header files for %{kaname} development
@@ -128,7 +141,7 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%files -f %{kaname}.lang
+%files
 %defattr(644,root,root,755)
 %{_libdir}/libKPim6MessageComposer.so.*.*
 %ghost %{_libdir}/libKPim6MessageComposer.so.6
@@ -149,6 +162,9 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/qt6/plugins/pim6/messageviewer/kf6
 %dir %{_libdir}/qt6/plugins/pim6/messageviewer/kf6/ktexttemplate
 %{_libdir}/qt6/plugins/pim6/messageviewer/kf6/ktexttemplate/messageviewer_ktexttemplate_extension.so
+
+%files data -f %{kaname}.lang
+%defattr(644,root,root,755)
 %{_datadir}/config.kcfg/customtemplates_kfg.kcfg
 %{_datadir}/config.kcfg/templatesconfiguration_kfg.kcfg
 %{_datadir}/knotifications6/messageviewer.notifyrc
